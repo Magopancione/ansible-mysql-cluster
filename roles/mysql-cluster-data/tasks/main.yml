@@ -8,8 +8,8 @@
   template: src=my.cnf dest=/etc/my.cnf
 - name: Install init file
   copy: src=ndbd.init dest=/etc/init.d/ndbd mode=0755
-- name: add like service ndbd.init
-  command: update-rc.d ndbd.init defaults  
+- name: add like service ndbd
+  command: update-rc.d ndbd defaults  
 - name: Activate init file
   service: name=ndbd enabled=yes
 - name: Initialize ndbd
