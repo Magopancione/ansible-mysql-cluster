@@ -1,4 +1,8 @@
 - hosts: mysql_cluster_mgm
+  become: yes
+  become_user: root
+  become_method: sudo
+  gather_facts: no
   environment:
         http_proxy: http://10.222.192.4:8080
         https_proxy: http://10.222.192.4:8080
@@ -6,6 +10,10 @@
   - mysql-cluster-mgm
 
 - hosts: mysql_cluster_data
+  become: yes
+  become_user: root
+  become_method: sudo
+  gather_facts: no
   environment:
         http_proxy: http://10.222.192.4:8080
         https_proxy: http://10.222.192.4:8080
@@ -13,6 +21,10 @@
   - mysql-cluster-data
 
 - hosts: mysql_cluster_sql
+  become: yes
+  become_user: root
+  become_method: sudo
+  gather_facts: no
   environment:
         http_proxy: http://10.222.192.4:8080
         https_proxy: http://10.222.192.4:8080
