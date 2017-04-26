@@ -1,6 +1,6 @@
 - name: Download binaries
   command: wget --continue -P /var/tmp http://dev.mysql.com/get/Downloads/MySQL-Cluster-7.3/mysql-cluster-gpl-7.3.4-linux-glibc2.5-x86_64.tar.gz
-- name: Extract binaries
+- name: Extract binaries  #errore mio ripristinare va solo crato il nuovo file file path /usr/local/mysql/bin/
   command: tar -C /usr/local -xzf /var/tmp/mysql-cluster-gpl-7.3.4-linux-glibc2.5-x86_64.tar.gz creates=/usr/local/mysql
 - name: Extract binaries
   command:  mv /usr/local/mysql-cluster-gpl-7.3.4-linux-glibc2.5-x86_64 /usr/local/mysql
