@@ -7,9 +7,9 @@
 - name: Install config
   template: src=my.cnf dest=/etc/my.cnf
 - name: Install init file
-  copy: src=ndb_mgmd.init dest=/etc/init.d/ndb_mgmd mode=0755
-- name: add like service ndb_mgmd
-  command: update-rc.d ndb_mgmd defaults    
+  copy: src=ndbd.init dest=/etc/init.d/ndbd mode=0755
+- name: add like service ndbd.init
+  command: update-rc.d ndbd.init defaults  
 - name: Activate init file
   service: name=ndbd enabled=yes
 - name: Initialize ndbd
