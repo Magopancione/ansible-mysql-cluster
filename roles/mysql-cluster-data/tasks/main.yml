@@ -4,8 +4,10 @@
   command: tar -C /var/tmp -xzf /var/tmp/mysql-cluster-gpl-7.3.4-linux-glibc2.5-x86_64.tar.gz creates=/var/tmp/mysql-cluster-gpl-7.3.4-linux-glibc2.5-x86_64
 - name: Extract createdir
   command: mkdir -p /usr/local/mysql/bin/
+
 - name: Install nbd binaries
-  command: install /usr/local/mysql/bin/ndbd /usr/local/bin/ndbd creates=/usr/local/bin/ndbd
+  command: install ndbd /usr/local/bin/ndbd chdir=/var/tmp/mysql-cluster-gpl-7.3.4-linux-glibc2.5-x86_64/bin/ creates=/usr/local/bin/ndbd  
+ 
 - name: Install config
   template: src=my.cnf dest=/etc/my.cnf
 - name: Install init file
