@@ -1,3 +1,10 @@
-192.168.104.10 ndb-mgm
-192.168.104.11 ndb0
-192.168.104.12 ndb1
+# The following lines are desirable for IPv6 capable hosts
+::1 ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+ff02::3 ip6-allhosts
+192.168.104.13 ndb-mgm
+192.168.104.14 ndb0
+192.168.104.15 ndb1
