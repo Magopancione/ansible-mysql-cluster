@@ -1,2 +1,3 @@
-mysql_cluster_mgm
-mysql_cluster_data
+192.168.104.10 ndb-mgm
+192.168.104.11 ndb0
+192.168.104.12 ndb1
